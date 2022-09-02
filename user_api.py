@@ -27,7 +27,7 @@ def user_by_id(id: int) -> dict:
         raise HTTPException(status_code=404, details= f"{id} not in car data") 
 
 @app.post("/users/", response_model = UserOutput)
-def add_user(user: str) -> UserOutput:
+def add_user(user: UserInput) -> UserOutput:
     new_user = UserOutput(name=user.name, id=len(db)+1)
     db.append(new_user)
     save_db(db)
