@@ -8,7 +8,7 @@ app = FastAPI(title = "User API")
 db = load_db()
 
 @app.get("/users/")
-def get_users(id: int|None, name: str|None = None) -> list:
+def get_users(id: int|None = None, name: str|None = None) -> list:
     ''' Returns a list of user '''
     result = db
     if name:
