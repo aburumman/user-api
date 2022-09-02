@@ -28,7 +28,7 @@ def user_by_id(id: int) -> dict:
 
 @app.post("/users/", response_model = UserInput)
 def add_user(user: str) -> UserOutput:
-    new_user = UserOutput(user=user.name, id=len(db)+1)
+    new_user = UserOutput(name=user.name, id=len(db)+1)
     db.append(new_user)
     save_db(db)
     return new_user
