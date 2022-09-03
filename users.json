@@ -1,54 +1,22 @@
 [
     {
-        "name": "Segun",
+        "name": "Foo Barrington",
         "id": 1
     },
     {
-        "name": "taiye",
+        "name": "Jane Doerty",
         "id": 2
     },
     {
-        "name": "lola",
+        "name": "John Douglas",
         "id": 3
     },
     {
-        "name": "Sam",
+        "name": "Pennt Merryweather",
         "id": 4
     },
     {
-        "name": "totiol",
+        "name": "Jonathan Snowly",
         "id": 5
-    },
-    {
-        "name": "Rachel",
-        "id": 6
-    },
-    {
-        "name": "qsaert",
-        "id": 7
-    },
-    {
-        "name": "kiev",
-        "id": 8
-    },
-    {
-        "name": "vladmir",
-        "id": 9
-    },
-    {
-        "name": "desmond",
-        "id": 10
-    },
-    {
-        "name": "Sharon",
-        "id": 11
-    },
-    {
-        "name": "Swhealer",
-        "id": 12
-    },
-    {
-        "name": "ayomide",
-        "id": 13
     }
 ]
