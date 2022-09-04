@@ -19,7 +19,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirement.txt
       - name: run tests
-        run: pytest ./tests
+      - run: pytest ./tests
 
   build_docker_image:
     runs-on: ubuntu-latest
