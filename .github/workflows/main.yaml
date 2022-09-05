@@ -55,8 +55,3 @@ jobs:
           push: true
           tags: 09035077346/user_api:1.1.0-$GITHUB_RUN_ID
 
-          docker-compose build
-      - name: docker push
-        run: |
-          docker-compose push
-
