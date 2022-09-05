@@ -57,12 +57,19 @@ jobs:
     needs: build_docker_image
 
     steps:
-      - name: create infrastructure and deploy api
+      #- name: create infrastructure and deploy api
         #uses: hannut91/aws-cli@v1.18.65
-        uses: hannut91/aws-cli@1.18.65
-
-        with:
-          args: aws cloudformation create-stack --stack-name user-api-deployment --template-body file://./ecs.yml --capabilities CAPABILITY_NAMED_IAM --parameters 'ParameterKey=SubnetID,ParameterValue=subnet-06e008ca7459ca28d'
+      - uses: actions/checkout@v1
+      - uses: mgenteluci/cloudformation-deploy-action@v1.4.1
+        env:
+          AWS_STACK_NAME: 'user-api-deployment'
+          AWS_REGION: 'us-east-1'
+          AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          PARAMETER_OVERRIDES: SubnetID=subnet-06e008ca7459ca28d
+          CAPABILITIES: CAPABILITY_NAMED_IAM
+          TEMPLATE: 'ecs.yml'
+          #with:
           #env:
           #  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           #  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
