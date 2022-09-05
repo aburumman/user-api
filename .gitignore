@@ -159,3 +159,8 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 *.swp
+./fargate_cfn.yaml
+./fargate_cfn.yml
+./user_api_fargate_td.json
+./fargate_task_definition.json
+./ecs_task_definition_1.json
