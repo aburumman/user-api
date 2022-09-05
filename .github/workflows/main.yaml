@@ -58,7 +58,9 @@ jobs:
 
     steps:
       - name: create infrastructure and deploy api
-        uses: hannut91/aws-cli@v1.18.65
+        #uses: hannut91/aws-cli@v1.18.65
+        uses: hannut91/aws-cli@1.18.65
+
         with:
           args: aws cloudformation create-stack --stack-name user-api-deployment \
             --template-body file://./ecs.yml --capabilities CAPABILITY_NAMED_IAM \
