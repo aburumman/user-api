@@ -51,5 +51,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: 09035077346/user_api:1.1.0-$GITHUB_RUN_ID
+          tags: 09035077346/user_api:1.1.0-${{ env.GITHUB_JOB }}
 
