@@ -53,7 +53,7 @@ jobs:
           file: ./Dockerfile
           platform: linux/amd64
           push: true
-          tags: 09035077346/user_api:1.1.0-
+          tags: 09035077346/user_api:1.1.0-$GITHUB_RUN_ID
 
           docker-compose build
       - name: docker push
