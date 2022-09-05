@@ -1,0 +1,12 @@
+ECSCluster:
+  Type: 'AWS::ECS::Cluster'
+  Properties:
+    ClusterName: MyFargateCluster
+    CapacityProviders:
+      - FARGATE
+      - FARGATE_SPOT
+    DefaultCapacityProviderStrategy:
+      - CapacityProvider: FARGATE
+        Weight: 1
+      - CapacityProvider: FARGATE_SPOT
+        Weight: 1
