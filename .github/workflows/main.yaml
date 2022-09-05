@@ -50,8 +50,6 @@ jobs:
         uses: docker/build-push-action@v3.1.1
         with:
           context: .
-          file: ./Dockerfile
-          platform: linux/amd64
           push: true
           tags: 09035077346/user_api:1.1.0-$GITHUB_RUN_ID
 
