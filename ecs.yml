@@ -43,7 +43,7 @@ Resources:
       ExecutionRoleArn: !Ref ExecutionRole
       ContainerDefinitions:
         - Name: user-api-container
-          Image: docker.io/09035077346/user_api:1.1.0-37
+          Image: docker.io/09035077346/user_api:1.1.0-${{ github.run_number }}
           #Image: nginx 
           PortMappings:
             - ContainerPort: 80
