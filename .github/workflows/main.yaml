@@ -62,9 +62,7 @@ jobs:
         uses: hannut91/aws-cli@1.18.65
 
         with:
-          args: aws cloudformation create-stack --stack-name user-api-deployment \
-            --template-body file://./ecs.yml --capabilities CAPABILITY_NAMED_IAM \
-            --parameters 'ParameterKey=SubnetID,ParameterValue=subnet-06e008ca7459ca28d'
+          args: aws cloudformation create-stack --stack-name user-api-deployment --template-body file://./ecs.yml --capabilities CAPABILITY_NAMED_IAM --parameters 'ParameterKey=SubnetID,ParameterValue=subnet-06e008ca7459ca28d'
           #env:
           #  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           #  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
