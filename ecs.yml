@@ -43,10 +43,10 @@ Resources:
       ExecutionRoleArn: !Ref ExecutionRole
       ContainerDefinitions:
         - Name: user-api-container
-          #Image: docker.io/09035077346/user_api:1.1.0-35
-          Image: nginx 
+          Image: docker.io/09035077346/user_api:1.1.0-37
+          #Image: nginx 
           PortMappings:
-            - ContainerPort: 8000
+            - ContainerPort: 80
           LogConfiguration:
             LogDriver: awslogs
             Options:
